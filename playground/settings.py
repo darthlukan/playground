@@ -3,14 +3,14 @@ import ConfigParser
 
 # Keep our secrets external
 parser = ConfigParser.SafeConfigParser()
-parser.read('../secrets.ini')
+parser.read('playground/secrets.ini')
 KEY = parser.get('Secrets', 'secret_key')
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@example.com'),
+    ('Brian Tomlinson', 'darthlukan@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -19,7 +19,6 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': '../fun.db',
-        # The following settings are not used with sqlite3:
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
